@@ -17,7 +17,7 @@ uint16_t crc16(uint16_t crc, uint8_t *buf, int len)
         crc = crc & 1 ? (crc >> 1) ^ POLY : crc >> 1;
         crc = crc & 1 ? (crc >> 1) ^ POLY : crc >> 1;
     }
-    crc = (((crc>>8)&0xff) | (crc<<8)); //Bytelerin swapli gitmesi isteniyorsa yazilmali aksi taktirde yorum satiri yapilabilir
+    crc = (((crc>>8)&0xff) | (crc<<8)); //Bytelerin swapli gitmesi isteniyorsa yazilmali aksi taktirde yorum satiri yapilabilir.
     return crc;
 }
 
